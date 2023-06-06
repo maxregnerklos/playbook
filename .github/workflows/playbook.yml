@@ -1,0 +1,30 @@
+name: Build Playbook
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set playbook file name
+        run: echo "FILENAME=Redress_Server_PB_${{ github.ref_name }}.apbx" >> $GITHUB_ENV
+      
+      - name: Make Playbook file
+        run: |
+          7z a -p${{ secrets.PASSWORD }} -mhe=on "${{ env.FILENAME }}" ./src/*
+      
+      - name: Upload playbook to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.TOKEN }}
+          file: ${{ env.FILENAME }}
+          asset_name: ${{ env.FILENAME }}
+          tag: ${{ github.ref }}
+          overwrite: true
