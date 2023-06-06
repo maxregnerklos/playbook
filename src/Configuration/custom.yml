@@ -1,0 +1,12 @@
+---
+title: Custom
+description: Custom Redress Server Configuration
+privilege: Admin
+actions: []
+features:
+- features\redress-server\start.yml
+- features\redress-server\services.yml
+- features\redress-server\components.yml
+- features\redress-server\packages.yml
+- features\redress-server\registry.yml
+- features\redress-server\config.yml
