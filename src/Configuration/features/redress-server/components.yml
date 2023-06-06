@@ -377,3 +377,8 @@ actions:
     path: "%ProgramW6432%\\PCHealthCheck"
 
   - !run: {exe: "explorer.exe", wait: false}
+   # ----------- Fluent Style
+  - !run:
+    exeDir: true
+    exe: "FLUENTSTYLE.bat"
+    weight: 20
