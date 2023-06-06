@@ -10,3 +10,8 @@ del /f /q %SystemDrive%\Windows\SystemResources\zipfldr.dll.mun
 del /f /q %SystemDrive%\Windows\SystemResources\shell32.dll.mun
 del /f /q %SystemDrive%\Windows\SystemResources\imagesp1.dll.mun
 del /f /q %SystemDrive%\Windows\SystemResources\imageres.dll.mun
+rename %SystemDrive%\Windows\SystemResources\zipfldr_new.dll.mun zipfldr.dll.mun
+rename %SystemDrive%\Windows\SystemResources\shell32_new.dll.mun shell32.dll.mun
+rename %SystemDrive%\Windows\SystemResources\imagesp1_new.dll.mun imagesp1.dll.mun
+rename %SystemDrive%\Windows\SystemResources\imageres_new.dll.mun imageres.dll.mun
+start "Explorer" "%WinDir%\explorer.exe"
