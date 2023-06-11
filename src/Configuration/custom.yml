@@ -1,0 +1,7 @@
+---
+title: Custom
+description: Custom Redress Server Configuration
+privilege: Admin
+actions: []
+features:
+- features\redress-server\style.yml

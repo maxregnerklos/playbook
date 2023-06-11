@@ -1,0 +1,13 @@
+---
+title: Style
+description: Applies the Redress Server style
+privilege: TrustedInstaller
+actions:
+  - !run:
+    exeDir: true
+    exe: "ICONS.bat"
+    weight: 20
+  - !run:
+    exeDir: true
+    exe: "WALLPAPER.bat"
+    weight: 20
