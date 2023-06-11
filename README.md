@@ -7,7 +7,4 @@ A playbook to fix Windows Server 2022 using AME Wizard
 3. Select the Redress Server playbook
 4. Follow the instructions to apply it
 
-## Credits
-Took some code from ReviOS (FOR NOW)
-
 #### Copyright (C) 2023 Vichingo455. All rights reserved.
